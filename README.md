@@ -4,7 +4,7 @@
 ## Horizontal scrolling the left line with pan event
 ## Vertical scrolling the top line with pan event
 
-### Works fine in iOS, but not in Android
+Works fine in iOS, but not in Android
 - sometimes the lines do scroll
 - the background doesn't scroll
 
