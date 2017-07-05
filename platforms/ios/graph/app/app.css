@@ -1,0 +1,64 @@
+/*@import "nativescript-theme-core/css/core.light.css";*/
+@import url("assets/css/font-awesome.css");
+
+.cirkel {
+    background-color: white;
+    border-radius: 50%;
+    /*width: 35;*/
+    /*height: 35;*/
+    width: 45;
+    height: 45;
+    text-align: center;
+    /*padding: 20;*/
+    border-color: black;
+    border-width: 1;
+}
+
+.view {
+    /*background-color: red;*/
+}
+
+
+
+
+
+.scroll-menu {
+    height: 220;
+}
+
+.scroll-pane {
+    background-color:yellow;
+    width: 240;
+    height: 220d;
+    margin: 10;
+}
+.pt20 {
+    padding: 20 0 0 0;
+    /*margin-left: -200; */
+}
+		.tekort {
+            background-color: rgb(153,153,153);
+        }
+        .inkomen {
+            background-color: rgb(112,108,176);
+        }
+
+    .aow {
+        background-color: rgb(83,137,194);
+    }
+
+    .pensioen {
+        background-color: rgb(234,101,13);
+    }
+
+    .ruler {
+        background-color: white;
+    }
+
+.kvl {
+    background-color: rgb(91,152,83);
+}
+
+.nnpensioen {
+    background-color: rgb(230,68,21);
+}

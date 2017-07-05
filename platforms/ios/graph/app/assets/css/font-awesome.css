@@ -1,0 +1,23 @@
+.fa {
+    font-family: FontAwesome, fontawesome-webfont;
+    color: rgb(234, 101, 13);
+    /*color: rgb(153,153,153);*/
+    font-size: 22;
+}
+
+.fa-disabled {
+    /*color: rgb(202,199,199);*/
+}
+
+.fa-white {
+    /*font-family: FontAwesome, fontawesome-webfont;*/
+    color: rgb(255, 255, 255);
+    /*font-size: 22;*/
+}
+
+.fa-icon {
+    /*font-family: FontAwesome, fontawesome-webfont;*/
+    color: rgb(234, 101, 13);
+    font-size: 25;
+    padding: 0 0 6 6;
+}

@@ -1,0 +1,24 @@
+<ActionBar class="actionbar">
+    <NavigationButton visibility="collapsed"></NavigationButton>
+    <StackLayout>
+        <GridLayout columns="35 * 45">
+            <Label [text]="'WELKOM.PAGETITLE' | translate" class="actionbar-title" col="1"></Label>
+        </GridLayout>
+    </StackLayout>
+</ActionBar>
+
+<ScrollView class="page-wrapper">
+    <StackLayout class="page">
+        <Image src="~/assets/images/nnlogo.png" class="picture"></Image>
+        <StackLayout visibility="{{ actief ? 'visible' : 'collapsed' }}">
+            <Label [text]="'WELKOM.TXT_01' | translate" textWrap="true" class="text"></Label>
+            <Label [text]="'WELKOM.TXT_02' | translate" textWrap="true" class="text"></Label>
+            <Label [text]="'MSGTEXTEN.MSGTXT_QRFOUT' | translate" class="text error" *ngIf="route === '/retry'" textWrap="true"></Label>
+            <Button class="button" [text]="'WELKOM.BTN_SCAN' | translate" (tap)="checkPermissionBeforeScan()"></Button>
+            <Button class="button" [text]="'WELKOM.BTN_FAQ' | translate" [nsRouterLink]="['/faq']"></Button>
+        </StackLayout>
+        <StackLayout visibility="{{ actief ? 'collapsed' : 'visible' }}">
+            <Label [text]="'GELDIGHEID.TXT_01' | translate" textWrap="true" class="text"></Label>
+        </StackLayout>
+    </StackLayout>
+</ScrollView>

@@ -1,0 +1,54 @@
+<ActionBar title="Graph POC"></ActionBar>
+
+<StackLayout padding="10 0 0 0" style="background-color: rgb(202,199,199)">
+
+    <AbsoluteLayout height="500" class="pt20 view">
+        <AbsoluteLayout #dragGraph (pan)="onPanGraph($event)" orientation="horizontal">
+            <StackLayout width="300" top="50" left="0">
+                <StackLayout height="450" class="inkomen" (tap)="onTap($event)"></StackLayout>
+            </StackLayout>
+            <StackLayout width="150" top="150" left="300">
+                <StackLayout height="150" class="tekort" (tap)="onTap($event)"></StackLayout>
+                <StackLayout height="75" class="kvl" (tap)="onTap($event)"></StackLayout>
+                <StackLayout height="25" class="pensioen" (tap)="onTap($event)"></StackLayout>
+                <StackLayout height="100" class="nnpensioen" (tap)="onTap($event)"></StackLayout>
+            </StackLayout>
+            <StackLayout width="600" top="150" left="450">
+                <StackLayout height="50" class="tekort" (tap)="onTap($event)"></StackLayout>
+                <StackLayout height="75" class="kvl" (tap)="onTap($event)"></StackLayout>
+                <StackLayout height="25" class="pensioen" (tap)="onTap($event)"></StackLayout>
+                <StackLayout height="75" class="nnpensioen" (tap)="onTap($event)"></StackLayout>
+                <StackLayout height="125" class="aow" (tap)="onTap($event)"></StackLayout>
+            </StackLayout>
+        </AbsoluteLayout>
+
+        <AbsoluteLayout #aowAge height="350" top="150" left="227">
+            <StackLayout width="1" class="ruler" top="0" left="22" height="100%"></StackLayout>
+            <!--<Label class="fa cirkel" [text]="'fa-times' | fonticon" top="157" right="0" (tap)="onTapAow($event)"></Label>-->
+            <AbsoluteLayout orientation="horizontal" class="cirkel" top="157" (tap)="onTapAge($event)">
+                <Label class="fa fa-disabled" [text]="'fa-chevron-right' | fonticon" top="12" left="11"></Label>
+                <Label class="fa fa-disabled" [text]="'fa-chevron-left' | fonticon" top="12" left="17"></Label>
+            </AbsoluteLayout>
+        </AbsoluteLayout>
+
+        <AbsoluteLayout #dragAge height="450" left="78" top="50">
+            <!--<Label class="fa cirkel" [text]="'fa-arrows-h' | fonticon" top="207" right="0" (tap)="onTapAge($event)"></Label>-->
+            <AbsoluteLayout orientation="horizontal" class="cirkel" top="207" (pan)="onPanAge($event)">
+                <Label class="fa" [text]="'fa-chevron-left' | fonticon" top="12" left="5" (tap)="onTapAge($event)"></Label>
+                <Label class="fa" [text]="'fa-chevron-right' | fonticon" top="12" left="21" (tap)="onTapAge($event)"></Label>
+            </AbsoluteLayout>
+            <StackLayout width="1" class="ruler" top="0" left="22" height="100%"></StackLayout>
+        </AbsoluteLayout>
+
+        <AbsoluteLayout #dragTarget top="128" left="100" width="750">
+            <StackLayout width="100%" class="ruler" top="22" left="0" height="1"></StackLayout>
+            <!--<Label class="fa cirkel" [text]="'fa-arrows-v' | fonticon" top="-17" left="100" (tap)="onTapTarget($event)"></Label>-->
+            <AbsoluteLayout orientation="vertical" class="cirkel" top="0" left="75" (pan)="onPanTarget($event)">
+                <Label class="fa" [text]="'fa-chevron-up' | fonticon" left="11" top="2" (tap)="onTapAge($event)"></Label>
+                <Label class="fa" [text]="'fa-chevron-down' | fonticon" left="11" top="17" (tap)="onTapAge($event)"></Label>
+            </AbsoluteLayout>
+        </AbsoluteLayout>
+
+    </AbsoluteLayout>
+
+</StackLayout>

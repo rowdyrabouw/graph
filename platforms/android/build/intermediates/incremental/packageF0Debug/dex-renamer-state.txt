@@ -1,0 +1,4 @@
+#Tue Jul 04 14:36:37 CEST 2017
+base.0=/Users/rowdyrabouw/Code/graph/platforms/android/build/intermediates/transforms/dex/F0/debug/folders/1000/1f/main
+renamed.0=classes.dex
+file.0=/Users/rowdyrabouw/Code/graph/platforms/android/build/intermediates/transforms/dex/F0/debug/folders/1000/1f/main/classes.dex
