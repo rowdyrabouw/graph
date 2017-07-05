@@ -15,7 +15,7 @@ import { Page } from "ui/page";
     selector: "graph",
     templateUrl: "graph.component.html"
 })
-export class GraphComponent implements OnInit, OnDestroy {
+export class GraphComponent implements OnInit, OnDestroy, AfterViewInit {
 
     @ViewChild("aowAge") aowAge: ElementRef;
     @ViewChild("dragAge") dragAge: ElementRef;
@@ -50,6 +50,29 @@ export class GraphComponent implements OnInit, OnDestroy {
         this.dragGraphItem.setInlineStyle('margin-left: -200');
         this.positionAgeX = this.dragAgeItem.left;
         this.positionTargetY = this.dragTargetItem.top;
+    }
+
+    ngAfterViewInit() {
+        this.dragAge.nativeElement.on('pan,tap', (args) => {
+            switch (args.eventName) {
+                case 'pan':
+                    this.onPanAge(args);
+                    break;
+                case 'tap':
+                    this.onTapAge(args);
+                    break;
+            }
+        });
+        this.dragTarget.nativeElement.on('pan,tap', (args) => {
+            switch (args.eventName) {
+                case 'pan':
+                    this.onPanTarget(args);
+                    break;
+                case 'tap':
+                    this.onTapAge(args);
+                    break;
+            }
+        });
     }
 
     ngOnDestroy() {
