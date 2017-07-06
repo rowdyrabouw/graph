@@ -3,21 +3,21 @@
 <StackLayout padding="10 0 0 0" style="background-color: rgb(202,199,199)">
 
     <AbsoluteLayout height="500" class="pt20 view">
-        <AbsoluteLayout #dragGraph (pan)="onPanGraph($event)" orientation="horizontal">
+        <AbsoluteLayout #dragGraph orientation="horizontal">
             <StackLayout width="2000" top="150" height="350" class="tekort"></StackLayout>
             <StackLayout width="300" top="50" left="0">
-                <StackLayout height="450" class="inkomen" (tap)="onTap($event)"></StackLayout>
+                <StackLayout height="450" class="inkomen"></StackLayout>
             </StackLayout>
             <StackLayout width="150" top="300" left="300">
-                <StackLayout height="75" class="kvl" (tap)="onTap($event)"></StackLayout>
-                <StackLayout height="25" class="pensioen" (tap)="onTap($event)"></StackLayout>
-                <StackLayout height="100" class="nnpensioen" (tap)="onTap($event)"></StackLayout>
+                <StackLayout height="75" class="kvl"></StackLayout>
+                <StackLayout height="25" class="pensioen"></StackLayout>
+                <StackLayout height="100" class="nnpensioen"></StackLayout>
             </StackLayout>
             <StackLayout width="600" top="100" left="450">
-                <StackLayout height="175" class="kvl" (tap)="onTap($event)"></StackLayout>
-                <StackLayout height="25" class="pensioen" (tap)="onTap($event)"></StackLayout>
-                <StackLayout height="75" class="nnpensioen" (tap)="onTap($event)"></StackLayout>
-                <StackLayout height="125" class="aow" (tap)="onTap($event)"></StackLayout>
+                <StackLayout height="175" class="kvl"></StackLayout>
+                <StackLayout height="25" class="pensioen"></StackLayout>
+                <StackLayout height="75" class="nnpensioen"></StackLayout>
+                <StackLayout height="125" class="aow"></StackLayout>
             </StackLayout>
         </AbsoluteLayout>
 

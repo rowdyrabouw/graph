@@ -53,6 +53,17 @@ export class GraphComponent implements OnInit, OnDestroy, AfterViewInit {
     }
 
     ngAfterViewInit() {
+        this.draghGraph.nativeElement.on('pan,tap', (args) => {
+            switch (args.eventName) {
+                case 'pan':
+                    this.onPanGraph(args);
+                    break;
+                case 'tap':
+                    this.onTapGraph(args);
+                    break;
+            }
+        });
+
         this.dragAge.nativeElement.on('pan,tap', (args) => {
             switch (args.eventName) {
                 case 'pan':
@@ -142,7 +153,7 @@ export class GraphComponent implements OnInit, OnDestroy, AfterViewInit {
         }
     }
 
-    onTap($event) {
+    onTapGraph($event) {
         alert('onTap: show zoom dialog');
     }
 
